@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 30% 96%; /* Lighter wheat */
+    --foreground: 35 40% 20%; /* Richer brown */
+    --card: 80 25% 95%; /* Very light sage */
+    --card-foreground: 35 40% 20%; /* Richer brown */
+    --popover: 80 25% 95%; /* Very light sage */
+    --popover-foreground: 35 40% 20%; /* Richer brown */
+    --primary: 100 40% 45%; /* Vibrant grass green */
+    --primary-foreground: 60 30% 96%; /* Lighter wheat */
+    --secondary: 45 70% 75%; /* Warm goldenrod */
+    --secondary-foreground: 35 40% 20%; /* Richer brown */
+    --muted: 60 20% 90%; /* Softer wheat */
+    --muted-foreground: 35 30% 35%; /* Softer brown */
+    --accent: 25 80% 55%; /* Brighter earthy orange */
+    --accent-foreground: 60 30% 96%; /* Lighter wheat */
+    --destructive: 0 85% 60%; /* Tomato red */
+    --destructive-foreground: 60 30% 96%; /* Lighter wheat */
+    --border: 80 35% 75%; /* Slightly darker sage border */
+    --input: 80 35% 75%; /* Slightly darker sage input */
+    --ring: 100 40% 45%; /* Vibrant grass green ring */
+
+    /* Chart colors */
+    --chart-1: 100 40% 45%; /* Vibrant grass green */
+    --chart-2: 45 70% 55%; /* Warm goldenrod */
+    --chart-3: 25 80% 55%; /* Brighter earthy orange */
+    --chart-4: 200 70% 55%; /* Vivid sky blue */
+    --chart-5: 280 60% 65%; /* Soft lavender */
+
+    /* Sidebar colors */
+    --sidebar-background: 80 25% 95%; /* Very light sage */
+    --sidebar-foreground: 35 40% 20%; /* Richer brown */
+    --sidebar-primary: 100 40% 45%; /* Vibrant grass green */
+    --sidebar-primary-foreground: 60 30% 96%; /* Lighter wheat */
+    --sidebar-accent: 25 80% 55%; /* Brighter earthy orange */
+    --sidebar-accent-foreground: 60 30% 96%; /* Lighter wheat */
+    --sidebar-border: 80 35% 75%; /* Slightly darker sage border */
+    --sidebar-ring: 100 40% 45%; /* Vibrant grass green ring */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 35 25% 15%; /* Deep brown */
+    --foreground: 60 10% 95%; /* Light wheat */
+    --card: 35 20% 20%; /* Dark earth */
+    --card-foreground: 60 10% 95%; /* Light wheat */
+    --popover: 35 20% 20%; /* Dark earth */
+    --popover-foreground: 60 10% 95%; /* Light wheat */
+    --primary: 100 30% 40%; /* Deep grass green */
+    --primary-foreground: 60 10% 95%; /* Light wheat */
+    --secondary: 45 40% 30%; /* Dark goldenrod */
+    --secondary-foreground: 60 10% 95%; /* Light wheat */
+    --muted: 35 20% 25%; /* Muted earth */
+    --muted-foreground: 60 10% 80%; /* Soft wheat */
+    --accent: 25 60% 50%; /* Deep earthy orange */
+    --accent-foreground: 60 10% 95%; /* Light wheat */
+    --destructive: 0 70% 40%; /* Deep tomato red */
+    --destructive-foreground: 60 10% 95%; /* Light wheat */
+    --border: 35 20% 30%; /* Dark earth border */
+    --input: 35 20% 30%; /* Dark earth input */
+    --ring: 100 30% 40%; /* Deep grass green ring */
+
+    /* Chart colors (adjusted for dark mode) */
+    --chart-1: 100 30% 40%; /* Deep grass green */
+    --chart-2: 45 60% 50%; /* Dark goldenrod */
+    --chart-3: 25 60% 50%; /* Deep earthy orange */
+    --chart-4: 200 50% 40%; /* Deep sky blue */
+    --chart-5: 280 40% 50%; /* Deep lavender */
+
+    /* Sidebar colors (adjusted for dark mode) */
+    --sidebar-background: 35 20% 20%; /* Dark earth */
+    --sidebar-foreground: 60 10% 95%; /* Light wheat */
+    --sidebar-primary: 100 30% 40%; /* Deep grass green */
+    --sidebar-primary-foreground: 60 10% 95%; /* Light wheat */
+    --sidebar-accent: 25 60% 50%; /* Deep earthy orange */
+    --sidebar-accent-foreground: 60 10% 95%; /* Light wheat */
+    --sidebar-border: 35 20% 30%; /* Dark earth border */
+    --sidebar-ring: 100 30% 40%; /* Deep grass green ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .hover\:bg-accent:hover {
+    background-color: hsl(25, 85%, 60%); /* Slightly brighter earthy orange */
+  }
+  .hover\:text-accent:hover {
+    color: hsl(25, 85%, 60%); /* Slightly brighter earthy orange */
+  }
+}
+
